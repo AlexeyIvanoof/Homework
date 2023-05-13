@@ -2,9 +2,11 @@ let a;
 a=alert(10)
 a=alert(20)//Задание 1
 
-a=alert("год выпуска первого iPhone 9 января 2007 года" )//Задание 2
+let year=2007
+alert(`год выпуска первого iPhone 9 января ${year} года` )//Задание 2
 
-a=alert("создатель языка JavaScript Брендан Айк")//Задание 3
+let creator="Брендан Айк";
+alert(`создатель языка JavaScript ${creator}`);//Задание 3
 
 let b=10;
 let c=2;
