@@ -66,7 +66,7 @@ switch (monthNumber) {
         case "12":
         console.log("декабрь-Зима")
         break;
-
+        
     default:
         console.log("Неверно")
         break;
