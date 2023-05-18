@@ -27,6 +27,7 @@ const obj={
 for (let salary in obj) {
   console.log(`${salary} зарплата ${obj[salary]} рублей`);
 }
+
 //Задание 5
 let n=1000;
 let nam=0;
