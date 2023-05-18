@@ -1,57 +1,47 @@
-let a;
-a=alert(10)
-a=alert(20)//Задание 1
+// домашка 4
 
-let year=2007
-alert(`год выпуска первого iPhone 9 января ${year} года` )//Задание 2
+//Задание 1
+let i = 1;
+while (i<=2) {
+  console.log("Привет");
+  i++;
+}
+//Задание 2
+let a = 1;
+while (a < 6) {
+  console.log(a);
+  a++;
+}
+//Задание 3
+let b = 7;
+while (b <= 22) {
+  console.log(b);
+  b++;
+}
+//Задание 4
+const obj={
+  'Коля':20000,
+  'Вася':30000,
+  'Петя':40000
+};
+for (let salary in obj) {
+  console.log(`${salary} зарплата ${obj[salary]} рублей`);
+}
 
-let creator="Брендан Айк";
-alert(`создатель языка JavaScript ${creator}`);//Задание 3
+//Задание 5
+let n=1000;
+let nam=0;
 
-let b=10;
-let c=2;
-let d=Number(b) + Number(c);
-alert(d);
-let e=Number(b) - Number(c);
-alert(e);
-let f=Number(b) * Number(c);
-alert(f);
-let j=Number(b) / Number(c);
-alert(j);//Задание 4
-
-alert(c**5)//2 в 5й степени Задание 5
-
-let i=9
-alert(i%2)// остаток от деления 9/2 Задание 6
-
-let num = 1;
-num += 5;
-num -= 3;
-num *= 7;
-num /= 3;
-num ++;
-num --;
-alert(num);// использование операторов присваивания Задание 7
-
-let age =(prompt ("Сколько вам лет?"));
-alert(age)//Задание 8
-
-const user={
-    name: "Ivan",
-    age:35,
-    isAdmin:true
-}// Задание 9
-
-user['city of residence']=true;// Задание 9.1
-
-user.age=37;
-console.log(user)//Задание 9.2
-
-delete user['city of residence']// Задание 9.3
-
-let info=prompt("Какую информацию хотите узнать о пользователе?")
-console.log(user[info]);
-alert(user[info])//Задание 9.4
-
-let name=prompt("Назовите свое имя");
-alert(`Привет, ${name}!`);//Задание 10
+while (n >= 50) {
+ n/=2;
+ nam +=1;
+ console.log(nam, n)
+}
+//Задание 6
+let fr=0;
+let wk=7;
+while(wk < 31){
+  fr=wk-2;
+  wk+=7;
+  console.log(`Сегодня пятница, ${fr}-е число. Необходимо подготовить отчет.`);
+}
