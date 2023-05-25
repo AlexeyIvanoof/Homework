@@ -3,6 +3,10 @@
         padding-left: 16px;
         padding-right: 16px;
     }
+.header{
+    align-items: center;
+    height: 735px;
+}
 .top-text{
         margin-top: 238.7px;
         font-family: 'Montserrat';
@@ -22,8 +26,8 @@ font-weight: 300;
 font-size: 14px;
 line-height: 22px;
 display: flex;
-align-items: center;
 text-align: center;
+flex-direction: column;
 color: #FFFFFF;
 } 
 .games__item{
@@ -51,13 +55,25 @@ color: #FFFFFF;
     text-align: center;
     color: #FFFFFF;    
 }
+.left{
+    align-items: center;
+    margin-top: 51px;
+    margin-bottom: 32px;
+}
 .console{
+    margin-top: 32px;
+    margin-bottom: 85px;
+}
+.console1{
     width: 344px;
 height: 236px;
-margin-top: 64px;
-margin-bottom: 85px;
+}
+.console2{
+    width: 344px;
+height: 236px;
 }
 .game-down{
+    margin-top: 55px;
     margin-bottom: 487px;
 }
 }
