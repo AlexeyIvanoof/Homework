@@ -15,4 +15,3 @@ function monthNumber() {
     alert ('Неправильный параметр!')
 }
 };
-console.log(monthNumber());

@@ -234,7 +234,7 @@
     font-weight: 300;
     font-size: 14px;
     line-height: 22px;
-    display: flex;
+    /* display: flex; */
     text-align: center;
     flex-direction: column;
     color: #FFFFFF;
