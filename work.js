@@ -1,100 +1,81 @@
-//Домашка 6
+//Домашка 7
 
 //Задание 1
 
-let arr = [1, 5, 4, 10, 0, 3];
+let str = 'Сорока';
+str = str.toUpperCase();
+console.log(str);
 
-for (let i = 0; i < arr.length; i++) {
-  if (arr[i] === 10) {
-    console.log(arr[i]);
-    break;
-  }
-  console.log(arr[i]);
-}
 //Задание 2
 
-const numbs = [1, 5, 4, 10, 0, 3];
-console.log(numbs.indexOf(4));
+let searchStart = ['Кошка', 'Кит', 'Комар', 'Носорог'];
+let search = 'ко';
+searchStart.forEach((searchStart) => {
+if (searchStart.toLowerCase().startsWith(search.toLowerCase())) {
+  searchStart = searchStart.split();
+ console.log(searchStart);
+	}
+});
 
-//Задание 3
+function filterByPrefix(arr, prefix){
+  const regex = new RegExp(`${prefix}`, "i");
+  return arr.filter((str)=> regex.test(str));
+};
+filterByPrefix(['Кошка', 'Кит', 'Комар', 'Носорог'],"ко");
+console.log(filterByPrefix(['Кошка', 'Кит', 'Комар', 'Носорог'],"ко"))// помогла Надя.
 
-let numb = [1, 3, 5, 10, 20];
-numb = numb.join(' ');
-console.log(numb);
+ //Задание 3
+let numbr = 32.58884
+ Math.floor(numbr);
+ Math.ceil(numbr);
+ Math.round(numbr);
+console.log(Math.floor(numbr), Math.ceil(numbr), Math.round(numbr));
 
 //Задание 4
 
-let num = [];
-for (let i = 0; i < 3; i++) {
-  let innerNum = [];
-  for (let j = 0; j < 3; j++) {
-    innerNum.push(1);
-  }
-  num.push(innerNum);
-};
-console.log(num);
+let max = Math.max(52, 53, 49, 77, 21, 32);
+let min = Math.min(52, 53, 49, 77, 21, 32);
+console.log(max, min);
 
 //Задание 5
 
-let z = [1, 1, 1,];
-z.push(2, 2, 2);
-console.log(z);
+function getRandomInt(min, max) {
+   return Math.random()* min, Math.random()*max;
+};
+console.log(getRandomInt(1, 10));
 
 //Задание 6
 
-let x = [9, 8, 7, 'a', 6, 5];
-x = x.sort();
-x.pop();
-console.log(x);
+function getRandomArrNumbers(num){
+  return (Array.from({length: num/2}, () =>Math.round(Math.random()* num)));
+};
+console.log(getRandomArrNumbers (8));
 
 //Задание 7
 
-let w = Number(prompt('Введите число'));
-let number = [9, 8, 7, 6, 5]
-let userNumber = number.includes(w);
-console.log(userNumber);
+function getRandomArrNumber(x, y) {
+  let num = Math.abs(y - x) + 1;
+  let randNum = Math.floor(Math.random() * num) + x;
+  return randNum;
+}
+console.log(getRandomArrNumber(2, 10));// ответ взят из интернета.
  
 //Задание 8
 
-let word = 'abcdef';
-word = word.split('').reverse().join('');
-console.log(word);
- 
+let myDate = new Date(2023, 4, 30, 19, 20, 20, 10);
+console.log(myDate); 
+
 //Задание 9
 
-let v = [[1, 2, 3,],[4, 5, 6]];
-let result = v.reduce((acc, cur) => acc.concat(cur), []);
-console.log(result);
+let currentDate = new Date(2023, 4, 30);
+currentDate.setDate(currentDate.getDate() + 73);
+console.log(currentDate);
 
 //Задание 10
+new Date(2023, 4, 30, 19, 20, 20, 10).toLocaleString('ru', {day:'numeric', month: 'long', year: 'numeric'});
+console.log( 'Дата:', new Date().toLocaleString('ru', {day:'numeric', month: 'long', year: 'numeric'}));
+new Date(2023, 4, 30, 19, 20, 20, 10).toLocaleTimeString();
+console.log('Время:', new Date().toLocaleTimeString());
 
-let array = [2, 8, 4, 7,];
-let resul = 0;
-for (let i = 0; i < array.length - 1; i++ ) {
-array[i] += array[i + 1];
-};
-console.log(array);
+//Задание 11 в script.js =>
 
-//Задание 11
-
-const m = [2, 5, 6, 7, 8];
-let resultat = m.map(item => (item ** 2));
-console.log(resultat);
-
-//Задание 12
-
-const str = ['слово', '', 'слог', 'длинное предложение', 'буква'];
-const getLength = sourse => sourse.map(str =>str.length);
-console.log(getLength(['слово', '', 'слог', 'длинное предложение', 'буква']));// помогла Надя.
-
-//Задание 13
-
-let arrr = [-1, 0, 5, -10, 56];
-let res = arrr.filter(function filterPositive(array) {
-  if(array < 0){
-    return true;
-  } else {
-    return false;
-  }
-});
-console.log(res);
