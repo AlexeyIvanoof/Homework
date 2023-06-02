@@ -15,3 +15,20 @@ function monthNumber() {
     alert ('Неправильный параметр!')
 }
 };
+ 
+//Домашка 7
+//Задание 11
+
+function word() {
+let gameWord = (['Яблоко', 'Груша', 'Дыня', 'Виноград', 'Персик', 'Апельсин', 'Мандарин']);
+gameWord = gameWord.sort(() => Math.random() - 0.5);
+alert(gameWord);
+let userAnswer1 = prompt('Чему равнялся первый элемент массива?');
+let userAnswer2 = prompt('Чему равнялся последний элемент массива?');
+if (gameWord[0].toLowerCase() === userAnswer1.toLowerCase() && gameWord[6].toLowerCase() === userAnswer2.toLowerCase() ) {
+  alert('Поздравляю! Ответ верный');
+} else if(gameWord[0].toLowerCase() === userAnswer1.toLowerCase() && gameWord[6].toLowerCase() !== userAnswer2.toLowerCase() || gameWord[0].toLowerCase() !== userAnswer1.toLowerCase() && gameWord[6].toLowerCase() === userAnswer2.toLowerCase()) {
+  alert('Вы были близки к победе!');
+} else {
+  alert('Ответ неверный! Пооробуй еще раз!');
+}};

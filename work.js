@@ -1,100 +1,76 @@
-//Домашка 6
+ //Домашка 8
 
-//Задание 1
+ //Задание 1
 
-let arr = [1, 5, 4, 10, 0, 3];
+ const people = [
+    { name: 'Глеб', age: 29 },
+    { name: 'Анна', age: 17 },
+    { name: 'Олег', age: 7 },
+    { name: 'Оксана', age: 47 }
+ ];
+ const compareAge = (a, b) => a.age - b.age;
+ console.log(people.sort(compareAge));
 
-for (let i = 0; i < arr.length; i++) {
-  if (arr[i] === 10) {
-    console.log(arr[i]);
-    break;
-  }
-  console.log(arr[i]);
-}
-//Задание 2
+  //Задание 2
 
-const numbs = [1, 5, 4, 10, 0, 3];
-console.log(numbs.indexOf(4));
+function isPositive(number) {
+   return number > 0;
+ }
+ 
+ function isMale(person) {
+   return person.gender === 'male';
+ }
+ 
+ function filter(arr, func) {
+   const result = [];
+   for (let i = 0; i < arr.length; i++) {
+     if (func(arr[i])) {
+       result.push(arr[i]);
+     }
+   }
+   return result;
+ }
+ 
+ console.log(filter([3, -4, 1, 9], isPositive)); // [3, 1, 9]
+ 
+ const peopl = [
+    {name: 'Глеб', gender: 'male'},
+    {name: 'Анна', gender: 'female'},
+    {name: 'Олег', gender: 'male'},
+    {name: 'Оксана', gender: 'female'}
+ ];
+ 
+ console.log(filter(peopl, isMale)); // [{name: 'Глеб', gender: 'male'}, {name: 'Олег', gender: 'male'}]
+ 
 
 //Задание 3
-
-let numb = [1, 3, 5, 10, 20];
-numb = numb.join(' ');
-console.log(numb);
-
+let myDate = new Date(2023, 5, 2, 12, 30, 20, 10); 
+let timerId = setInterval(() => alert(myDate), 3000);
+setTimeout(() => { clearInterval(timerId); alert('Прошло 30сек.'); }, 30000);
+ 
 //Задание 4
 
-let num = [];
-for (let i = 0; i < 3; i++) {
-  let innerNum = [];
-  for (let j = 0; j < 3; j++) {
-    innerNum.push(1);
-  }
-  num.push(innerNum);
-};
-console.log(num);
+function delayForSecond(callback) {
+   setTimeout(callback, 5000);// вывод через 5сек.
+}
+
+delayForSecond(function () {
+  console.log('Привет, Глеб!');
+})
 
 //Задание 5
 
-let z = [1, 1, 1,];
-z.push(2, 2, 2);
-console.log(z);
+function delayForSecond(cb) {
+   setTimeout(() => {
+       console.log('Прошла одна секунда');
+           if(cb) { 	cb(); }
+   }, 1000)
+}
 
-//Задание 6
+function sayHi (name) {
+   console.log(`Привет, ${name}!`);
+}
 
-let x = [9, 8, 7, 'a', 6, 5];
-x = x.sort();
-x.pop();
-console.log(x);
-
-//Задание 7
-
-let w = Number(prompt('Введите число'));
-let number = [9, 8, 7, 6, 5]
-let userNumber = number.includes(w);
-console.log(userNumber);
- 
-//Задание 8
-
-let word = 'abcdef';
-word = word.split('').reverse().join('');
-console.log(word);
- 
-//Задание 9
-
-let v = [[1, 2, 3,],[4, 5, 6]];
-let result = v.reduce((acc, cur) => acc.concat(cur), []);
-console.log(result);
-
-//Задание 10
-
-let array = [2, 8, 4, 7,];
-let resul = 0;
-for (let i = 0; i < array.length - 1; i++ ) {
-array[i] += array[i + 1];
-};
-console.log(array);
-
-//Задание 11
-
-const m = [2, 5, 6, 7, 8];
-let resultat = m.map(item => (item ** 2));
-console.log(resultat);
-
-//Задание 12
-
-const str = ['слово', '', 'слог', 'длинное предложение', 'буква'];
-const getLength = sourse => sourse.map(str =>str.length);
-console.log(getLength(['слово', '', 'слог', 'длинное предложение', 'буква']));// помогла Надя.
-
-//Задание 13
-
-let arrr = [-1, 0, 5, -10, 56];
-let res = arrr.filter(function filterPositive(array) {
-  if(array < 0){
-    return true;
-  } else {
-    return false;
-  }
-});
-console.log(res);
+setTimeout(() => {
+   return sayHi('Глеб');
+}, 2000); delayForSecond();
